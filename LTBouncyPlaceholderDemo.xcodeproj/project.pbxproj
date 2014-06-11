@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7900DD0194591E500F9A51F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900DCF194591E500F9A51F /* AppDelegate.swift */; };
+		D7900DD2194591E500F9A51F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7900DD1194591E500F9A51F /* Images.xcassets */; };
+		D7900DDE194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900DDD194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift */; };
+		D7900DE81945920000F9A51F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7900DE71945920000F9A51F /* Main.storyboard */; };
+		D7900DEB194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900DEA194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift */; };
+		D7D9C5F719475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9C5F619475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7900DD8194591E500F9A51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7900DC2194591E500F9A51F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7900DC9194591E500F9A51F;
+			remoteInfo = LTBouncyPlaceholderDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D7900DCA194591E500F9A51F /* LTBouncyPlaceholderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTBouncyPlaceholderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7900DCE194591E500F9A51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7900DCF194591E500F9A51F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7900DD1194591E500F9A51F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D7900DD7194591E500F9A51F /* LTBouncyPlaceholderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LTBouncyPlaceholderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7900DDC194591E500F9A51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7900DDD194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTBouncyPlaceholderDemoTests.swift; sourceTree = "<group>"; };
+		D7900DE71945920000F9A51F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D7900DEA194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+LTBouncyPlaceholder.swift"; sourceTree = "<group>"; };
+		D7D9C5F619475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+LTBouncyPlaceholderKeys.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7900DC7194591E500F9A51F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7900DD4194591E500F9A51F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7900DC1194591E500F9A51F = {
+			isa = PBXGroup;
+			children = (
+				D7900DE91945928400F9A51F /* LTBouncyPlaceholder */,
+				D7900DCC194591E500F9A51F /* LTBouncyPlaceholderDemo */,
+				D7900DDA194591E500F9A51F /* LTBouncyPlaceholderDemoTests */,
+				D7900DCB194591E500F9A51F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7900DCB194591E500F9A51F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7900DCA194591E500F9A51F /* LTBouncyPlaceholderDemo.app */,
+				D7900DD7194591E500F9A51F /* LTBouncyPlaceholderDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7900DCC194591E500F9A51F /* LTBouncyPlaceholderDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D7900DCF194591E500F9A51F /* AppDelegate.swift */,
+				D7900DD1194591E500F9A51F /* Images.xcassets */,
+				D7900DCD194591E500F9A51F /* Supporting Files */,
+				D7900DE71945920000F9A51F /* Main.storyboard */,
+			);
+			path = LTBouncyPlaceholderDemo;
+			sourceTree = "<group>";
+		};
+		D7900DCD194591E500F9A51F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7900DCE194591E500F9A51F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7900DDA194591E500F9A51F /* LTBouncyPlaceholderDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7900DDD194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift */,
+				D7900DDB194591E500F9A51F /* Supporting Files */,
+			);
+			path = LTBouncyPlaceholderDemoTests;
+			sourceTree = "<group>";
+		};
+		D7900DDB194591E500F9A51F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7900DDC194591E500F9A51F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D7900DE91945928400F9A51F /* LTBouncyPlaceholder */ = {
+			isa = PBXGroup;
+			children = (
+				D7900DEA194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift */,
+				D7D9C5F619475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift */,
+			);
+			path = LTBouncyPlaceholder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7900DC9194591E500F9A51F /* LTBouncyPlaceholderDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7900DE1194591E500F9A51F /* Build configuration list for PBXNativeTarget "LTBouncyPlaceholderDemo" */;
+			buildPhases = (
+				D7900DC6194591E500F9A51F /* Sources */,
+				D7900DC7194591E500F9A51F /* Frameworks */,
+				D7900DC8194591E500F9A51F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LTBouncyPlaceholderDemo;
+			productName = LTBouncyPlaceholderDemo;
+			productReference = D7900DCA194591E500F9A51F /* LTBouncyPlaceholderDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7900DD6194591E500F9A51F /* LTBouncyPlaceholderDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7900DE4194591E500F9A51F /* Build configuration list for PBXNativeTarget "LTBouncyPlaceholderDemoTests" */;
+			buildPhases = (
+				D7900DD3194591E500F9A51F /* Sources */,
+				D7900DD4194591E500F9A51F /* Frameworks */,
+				D7900DD5194591E500F9A51F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7900DD9194591E500F9A51F /* PBXTargetDependency */,
+			);
+			name = LTBouncyPlaceholderDemoTests;
+			productName = LTBouncyPlaceholderDemoTests;
+			productReference = D7900DD7194591E500F9A51F /* LTBouncyPlaceholderDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7900DC2194591E500F9A51F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = LexTang.com;
+				TargetAttributes = {
+					D7900DC9194591E500F9A51F = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					D7900DD6194591E500F9A51F = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = D7900DC9194591E500F9A51F;
+					};
+				};
+			};
+			buildConfigurationList = D7900DC5194591E500F9A51F /* Build configuration list for PBXProject "LTBouncyPlaceholderDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D7900DC1194591E500F9A51F;
+			productRefGroup = D7900DCB194591E500F9A51F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7900DC9194591E500F9A51F /* LTBouncyPlaceholderDemo */,
+				D7900DD6194591E500F9A51F /* LTBouncyPlaceholderDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7900DC8194591E500F9A51F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7900DD2194591E500F9A51F /* Images.xcassets in Resources */,
+				D7900DE81945920000F9A51F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7900DD5194591E500F9A51F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7900DC6194591E500F9A51F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7D9C5F719475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift in Sources */,
+				D7900DD0194591E500F9A51F /* AppDelegate.swift in Sources */,
+				D7900DEB194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7900DD3194591E500F9A51F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7900DDE194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7900DD9194591E500F9A51F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7900DC9194591E500F9A51F /* LTBouncyPlaceholderDemo */;
+			targetProxy = D7900DD8194591E500F9A51F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D7900DDF194591E500F9A51F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7900DE0194591E500F9A51F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7900DE2194591E500F9A51F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = LTBouncyPlaceholderDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D7900DE3194591E500F9A51F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = LTBouncyPlaceholderDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D7900DE5194591E500F9A51F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LTBouncyPlaceholderDemo.app/LTBouncyPlaceholderDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LTBouncyPlaceholderDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		D7900DE6194591E500F9A51F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LTBouncyPlaceholderDemo.app/LTBouncyPlaceholderDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LTBouncyPlaceholderDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7900DC5194591E500F9A51F /* Build configuration list for PBXProject "LTBouncyPlaceholderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7900DDF194591E500F9A51F /* Debug */,
+				D7900DE0194591E500F9A51F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7900DE1194591E500F9A51F /* Build configuration list for PBXNativeTarget "LTBouncyPlaceholderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7900DE2194591E500F9A51F /* Debug */,
+				D7900DE3194591E500F9A51F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7900DE4194591E500F9A51F /* Build configuration list for PBXNativeTarget "LTBouncyPlaceholderDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7900DE5194591E500F9A51F /* Debug */,
+				D7900DE6194591E500F9A51F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7900DC2194591E500F9A51F /* Project object */;
+}
