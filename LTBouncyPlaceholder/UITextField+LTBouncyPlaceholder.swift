@@ -157,11 +157,11 @@ extension UITextField {
 
     func _bounceKeyframes(#toRight: Bool) -> NSArray {
         let steps = 100
-        var values = Double[]()
+        var values = [Double]()
         var value: Double
         let e = 2.5
         let distance = Float(self.placeholderRectForBounds(self.bounds).size.width) - _widthOfAbbr
-        for t in 0..steps {
+        for t in 0..<steps {
             value = Double(distance)
                 * (toRight ? -1 : 1)
                 * Double(pow(e, -0.055 * Double(t)))
