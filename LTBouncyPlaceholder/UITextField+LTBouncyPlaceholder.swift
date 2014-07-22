@@ -95,7 +95,7 @@ extension UITextField {
         
     }
 
-    override func willMoveToSuperview(newSuperview: UIView!) {
+    override public func willMoveToSuperview(newSuperview: UIView!) {
         if newSuperview {
             lt_placeholderLabel.setNeedsDisplay()
             
@@ -104,10 +104,8 @@ extension UITextField {
             }
             
             dispatch_once(&TokenHolder.token) {
-                var originMethod: Method = class_getInstanceMethod(object_getClass(UITextField()),
-                    Selector.convertFromStringLiteral("drawPlaceholderInRect:".bridgeToObjectiveC().UTF8String))
-                var swizzledMethod: Method = class_getInstanceMethod(object_getClass(UITextField()),
-                    Selector.convertFromStringLiteral("_drawPlaceholderInRect:".bridgeToObjectiveC().UTF8String))
+                var originMethod: Method = class_getInstanceMethod(object_getClass(self), Selector("drawPlaceholderInRect:"))
+                var swizzledMethod: Method = class_getInstanceMethod(object_getClass(self), Selector("_drawPlaceholderInRect:"))
                 method_exchangeImplementations(originMethod, swizzledMethod)
 
             }
