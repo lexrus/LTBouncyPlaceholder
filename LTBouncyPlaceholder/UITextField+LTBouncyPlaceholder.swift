@@ -18,7 +18,7 @@ extension UITextField {
     *  A property declare whether the placeholder will play the bouncy animation during typing.
     *  This property may be set in "User Defined Runtime Attributes" via Storyboard
     */
-    var alwaysBouncePlaceholder: Bool {
+    public var alwaysBouncePlaceholder: Bool {
     get {
         var _alwaysBouncePlaceholderObject : AnyObject?
             = objc_getAssociatedObject(self, kAlwaysBouncePlaceholderPointer)
@@ -36,11 +36,11 @@ extension UITextField {
     }
     }
 
-    var abbreviatedPlaceholder: NSString? {
+    public var abbreviatedPlaceholder: String? {
     get {
         var _abbreviatedPlaceholderObject: AnyObject? = objc_getAssociatedObject(self, kAbbreviatedPlaceholderPointer)
         if let _abbreviatedPlaceholder: AnyObject = _abbreviatedPlaceholderObject {
-            return _abbreviatedPlaceholder as? NSString
+            return _abbreviatedPlaceholder as? String
         }
         return nil
     }
@@ -53,7 +53,7 @@ extension UITextField {
     }
     }
 
-    var lt_placeholderLabel: UILabel {
+    private var lt_placeholderLabel: UILabel {
     get {
         var _placeholderLabelObject: AnyObject? = objc_getAssociatedObject(self, kPlaceholderLabelPointer)
         if let _placeholderLabel : AnyObject = _placeholderLabelObject {
@@ -72,7 +72,7 @@ extension UITextField {
     }
     }
 
-    var lt_rightPlaceholderLabel: UILabel {
+    private var lt_rightPlaceholderLabel: UILabel {
     get {
         var _rightPlaceholderLabelObject: AnyObject? = objc_getAssociatedObject(self, kRightPlaceholderLabelPointer)
         if let _rightPlaceholderLabel: AnyObject = _rightPlaceholderLabelObject {
@@ -91,7 +91,7 @@ extension UITextField {
     }
     }
 
-    func _drawPlaceholderInRect(rect: CGRect) {
+    private func _drawPlaceholderInRect(rect: CGRect) {
         
     }
 
@@ -121,7 +121,7 @@ extension UITextField {
         }
     }
 
-    func _didChange (notification: NSNotification) {
+    private func _didChange (notification: NSNotification) {
         if notification.object === self {
             if self.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
                 if alwaysBouncePlaceholder {
@@ -140,9 +140,9 @@ extension UITextField {
         }
     }
 
-    var _widthOfAbbr: Float {
+    private var _widthOfAbbr: Float {
     get {
-        let rightPlaceholder: NSString? = abbreviatedPlaceholder ? abbreviatedPlaceholder : placeholder
+        let rightPlaceholder: String? = !abbreviatedPlaceholder!.isEmpty ? abbreviatedPlaceholder : placeholder
         
         if let _rightPlaceholder = rightPlaceholder {
             let attributes = [NSFontAttributeName: lt_rightPlaceholderLabel.font]
@@ -153,7 +153,7 @@ extension UITextField {
     }
     }
 
-    func _bounceKeyframes(#toRight: Bool) -> NSArray {
+    private func _bounceKeyframes(#toRight: Bool) -> NSArray {
         let steps = 100
         var values = [Double]()
         var value: Double
@@ -167,10 +167,10 @@ extension UITextField {
                 + (toRight ? Double(distance) : 0)
             values.append(value)
         }
-        return values.bridgeToObjectiveC()
+        return values
     }
 
-    func _animatePlaceholder (#toRight: Bool) {
+    private func _animatePlaceholder (#toRight: Bool) {
         if let abbrPlaceholder = abbreviatedPlaceholder {
             if (toRight) {
                 if lt_rightPlaceholderLabel.layer.presentationLayer().opacity > 0 {
