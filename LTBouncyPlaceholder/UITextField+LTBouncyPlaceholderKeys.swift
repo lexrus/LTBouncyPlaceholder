@@ -7,10 +7,25 @@
 //
 
 var kAlwaysBouncePlaceholderKey = "kAlwaysBouncePlaceholder"
-let kAlwaysBouncePlaceholderPointer = UnsafePointer<String>(COpaquePointer(&kAlwaysBouncePlaceholderKey))
+let kAlwaysBouncePlaceholderPointer = withUnsafePointer(&kAlwaysBouncePlaceholderKey) {
+    (pointer:UnsafePointer<String>) -> UnsafePointer<String> in
+    return pointer
+}
+
 var kAbbreviatedPlaceholderKey = "kAbbreviatedPlaceholderKey"
-let kAbbreviatedPlaceholderPointer = UnsafePointer<String>(COpaquePointer(&kAbbreviatedPlaceholderKey))
+let kAbbreviatedPlaceholderPointer = withUnsafePointer(&kAbbreviatedPlaceholderKey) {
+    (pointer:UnsafePointer<String>) -> UnsafePointer<String> in
+    return pointer
+}
+
 var kPlaceholderLabelKey = "kPlaceholderLabelKey"
-let kPlaceholderLabelPointer = UnsafePointer<String>(COpaquePointer(&kPlaceholderLabelKey))
+let kPlaceholderLabelPointer = withUnsafePointer(&kPlaceholderLabelKey) {
+    (pointer:UnsafePointer<String>) -> UnsafePointer<String> in
+    return pointer
+}
+
 var kRightPlaceholderLabelKey = "kRightPlaceholderLabelKey"
-let kRightPlaceholderLabelPointer = UnsafePointer<String>(COpaquePointer(&kRightPlaceholderLabelKey))
+let kRightPlaceholderLabelPointer = withUnsafePointer(&kRightPlaceholderLabelKey) {
+    (pointer:UnsafePointer<String>) -> UnsafePointer<String> in
+    return pointer
+}

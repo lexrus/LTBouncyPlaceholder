@@ -59,11 +59,11 @@ extension UITextField {
         if let _placeholderLabel : AnyObject = _placeholderLabelObject {
             return _placeholderLabel as UILabel
         }
-        var _placeholderLabel = UILabel(frame: self.placeholderRectForBounds(self.bounds))
-        _placeholderLabel.font = self.font
+        var _placeholderLabel = UILabel(frame: placeholderRectForBounds(bounds))
+        _placeholderLabel.font = font
         _placeholderLabel.text = placeholder
-        _placeholderLabel.textColor = UIColor.lightGrayColor()
-        self.addSubview(_placeholderLabel)
+        _placeholderLabel.textColor = .lightGrayColor()
+        addSubview(_placeholderLabel)
         objc_setAssociatedObject(self,
             kPlaceholderLabelPointer,
             _placeholderLabel,
@@ -78,11 +78,11 @@ extension UITextField {
         if let _rightPlaceholderLabel: AnyObject = _rightPlaceholderLabelObject {
             return _rightPlaceholderLabel as UILabel
         }
-        var _rightPlaceholderLabel = UILabel(frame: self.placeholderRectForBounds(self.bounds))
-        _rightPlaceholderLabel.font = self.font
-        _rightPlaceholderLabel.textColor = UIColor.lightGrayColor()
+        var _rightPlaceholderLabel = UILabel(frame: placeholderRectForBounds(bounds))
+        _rightPlaceholderLabel.font = font
+        _rightPlaceholderLabel.textColor = .lightGrayColor()
         _rightPlaceholderLabel.layer.opacity = 0.0
-        self.addSubview(_rightPlaceholderLabel)
+        addSubview(_rightPlaceholderLabel)
         objc_setAssociatedObject(self,
             kRightPlaceholderLabelPointer,
             _rightPlaceholderLabel,
@@ -91,12 +91,12 @@ extension UITextField {
     }
     }
 
-    private func _drawPlaceholderInRect(rect: CGRect) {
-        
+    func _drawPlaceholderInRect(rect: CGRect) {
+        println("swizzled default method")
     }
 
     override public func willMoveToSuperview(newSuperview: UIView!) {
-        if newSuperview {
+        if (nil != newSuperview) {
             lt_placeholderLabel.setNeedsDisplay()
             
             struct TokenHolder {
@@ -121,18 +121,18 @@ extension UITextField {
         }
     }
 
-    private func _didChange (notification: NSNotification) {
+    func _didChange (notification: NSNotification) {
         if notification.object === self {
-            if self.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
+            if text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
                 if alwaysBouncePlaceholder {
                     
-                    self._animatePlaceholder(toRight: true)
+                    _animatePlaceholder(toRight: true)
                 } else {
                     lt_placeholderLabel.hidden = true
                 }
             } else {
                 if alwaysBouncePlaceholder {
-                    self._animatePlaceholder(toRight: false)
+                    _animatePlaceholder(toRight: false)
                 } else {
                     lt_placeholderLabel.hidden = false
                 }
@@ -158,7 +158,7 @@ extension UITextField {
         var values = [Double]()
         var value: Double
         let e = 2.5
-        let distance = Float(self.placeholderRectForBounds(self.bounds).size.width) - _widthOfAbbr
+        let distance = Float(placeholderRectForBounds(bounds).size.width) - _widthOfAbbr
         for t in 0..<steps {
             value = Double(distance)
                 * (toRight ? -1 : 1)
@@ -177,8 +177,8 @@ extension UITextField {
                     return
                 }
                 
-                self.lt_placeholderLabel.layer.removeAllAnimations()
-                self.lt_rightPlaceholderLabel.layer.removeAllAnimations()
+                lt_placeholderLabel.layer.removeAllAnimations()
+                lt_rightPlaceholderLabel.layer.removeAllAnimations()
                 
                 let bounceToRight = CAKeyframeAnimation(keyPath: "position.x")
                 bounceToRight.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
@@ -195,8 +195,8 @@ extension UITextField {
                 fadeOut.duration = kAnimationDuration / 3
                 fadeOut.fillMode = kCAFillModeBoth
                 fadeOut.removedOnCompletion = false
-                self.lt_placeholderLabel.layer.addAnimation(bounceToRight, forKey: "bounceToRight")
-                self.lt_placeholderLabel.layer.addAnimation(fadeOut, forKey: "fadeOut")
+                lt_placeholderLabel.layer.addAnimation(bounceToRight, forKey: "bounceToRight")
+                lt_placeholderLabel.layer.addAnimation(fadeOut, forKey: "fadeOut")
                 
                 let fadeIn = CABasicAnimation(keyPath: "opacity")
                 fadeIn.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
@@ -206,11 +206,11 @@ extension UITextField {
                 fadeIn.fillMode = kCAFillModeForwards
                 fadeIn.removedOnCompletion = false
                 
-                self.lt_rightPlaceholderLabel.layer.addAnimation(bounceToRight, forKey: "bounceToRight")
-                self.lt_rightPlaceholderLabel.layer.addAnimation(fadeIn, forKey: "fadeIn")
+                lt_rightPlaceholderLabel.layer.addAnimation(bounceToRight, forKey: "bounceToRight")
+                lt_rightPlaceholderLabel.layer.addAnimation(fadeIn, forKey: "fadeIn")
             } else {
-                self.lt_placeholderLabel.layer.removeAllAnimations()
-                self.lt_rightPlaceholderLabel.layer.removeAllAnimations()
+                lt_placeholderLabel.layer.removeAllAnimations()
+                lt_rightPlaceholderLabel.layer.removeAllAnimations()
                 
                 let bounceToLeft = CAKeyframeAnimation(keyPath: "position.x")
                 bounceToLeft.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
@@ -227,8 +227,8 @@ extension UITextField {
                 fadeIn.fromValue = 0
                 fadeIn.toValue = 1
                 fadeIn.removedOnCompletion = false
-                self.lt_placeholderLabel.layer.addAnimation(fadeIn, forKey: "fadeIn")
-                self.lt_placeholderLabel.layer.addAnimation(bounceToLeft, forKey: "bounceToLeft")
+                lt_placeholderLabel.layer.addAnimation(fadeIn, forKey: "fadeIn")
+                lt_placeholderLabel.layer.addAnimation(bounceToLeft, forKey: "bounceToLeft")
                 
                 let fadeOut = CABasicAnimation(keyPath: "opacity")
                 fadeOut.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
@@ -237,8 +237,8 @@ extension UITextField {
                 fadeOut.fromValue = 1
                 fadeOut.toValue = 0
                 fadeOut.removedOnCompletion = false
-                self.lt_rightPlaceholderLabel.layer.addAnimation(fadeOut, forKey: "fadeOut")
-                self.lt_rightPlaceholderLabel.layer.addAnimation(bounceToLeft, forKey: "bounceToLeft")
+                lt_rightPlaceholderLabel.layer.addAnimation(fadeOut, forKey: "fadeOut")
+                lt_rightPlaceholderLabel.layer.addAnimation(bounceToLeft, forKey: "bounceToLeft")
             }
         } else {
             lt_placeholderLabel.layer.removeAllAnimations()
