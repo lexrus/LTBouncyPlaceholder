@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 import QuartzCore
 
+var kAlwaysBouncePlaceholderPointer: Void?
+var kAbbreviatedPlaceholderPointer: Void?
+var kPlaceholderLabelPointer: Void?
+var kRightPlaceholderLabelPointer: Void?
+
 let kAnimationDuration: CFTimeInterval = 0.6
 
 extension UITextField {
@@ -21,7 +26,7 @@ extension UITextField {
     public var alwaysBouncePlaceholder: Bool {
     get {
         var _alwaysBouncePlaceholderObject : AnyObject?
-            = objc_getAssociatedObject(self, kAlwaysBouncePlaceholderPointer)
+            = objc_getAssociatedObject(self, &kAlwaysBouncePlaceholderPointer)
         if let _alwaysBouncePlaceholder = _alwaysBouncePlaceholderObject?.boolValue {
             return _alwaysBouncePlaceholder
         }
@@ -30,7 +35,7 @@ extension UITextField {
     set {
         lt_placeholderLabel.hidden = !newValue
         objc_setAssociatedObject(self,
-            kAlwaysBouncePlaceholderPointer,
+            &kAlwaysBouncePlaceholderPointer,
             newValue,
             objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
     }
@@ -38,7 +43,7 @@ extension UITextField {
 
     public var abbreviatedPlaceholder: String? {
     get {
-        var _abbreviatedPlaceholderObject: AnyObject? = objc_getAssociatedObject(self, kAbbreviatedPlaceholderPointer)
+        var _abbreviatedPlaceholderObject: AnyObject? = objc_getAssociatedObject(self, &kAbbreviatedPlaceholderPointer)
         if let _abbreviatedPlaceholder: AnyObject = _abbreviatedPlaceholderObject {
             return _abbreviatedPlaceholder as? String
         }
@@ -47,7 +52,7 @@ extension UITextField {
     set {
         lt_rightPlaceholderLabel.text = newValue
         objc_setAssociatedObject(self,
-            kAbbreviatedPlaceholderPointer,
+            &kAbbreviatedPlaceholderPointer,
             newValue,
             objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
     }
@@ -55,7 +60,7 @@ extension UITextField {
 
     private var lt_placeholderLabel: UILabel {
     get {
-        var _placeholderLabelObject: AnyObject? = objc_getAssociatedObject(self, kPlaceholderLabelPointer)
+        var _placeholderLabelObject: AnyObject? = objc_getAssociatedObject(self, &kPlaceholderLabelPointer)
         if let _placeholderLabel : AnyObject = _placeholderLabelObject {
             return _placeholderLabel as UILabel
         }
@@ -65,7 +70,7 @@ extension UITextField {
         _placeholderLabel.textColor = .lightGrayColor()
         addSubview(_placeholderLabel)
         objc_setAssociatedObject(self,
-            kPlaceholderLabelPointer,
+            &kPlaceholderLabelPointer,
             _placeholderLabel,
             objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
         return _placeholderLabel
@@ -74,7 +79,7 @@ extension UITextField {
 
     private var lt_rightPlaceholderLabel: UILabel {
     get {
-        var _rightPlaceholderLabelObject: AnyObject? = objc_getAssociatedObject(self, kRightPlaceholderLabelPointer)
+        var _rightPlaceholderLabelObject: AnyObject? = objc_getAssociatedObject(self, &kRightPlaceholderLabelPointer)
         if let _rightPlaceholderLabel: AnyObject = _rightPlaceholderLabelObject {
             return _rightPlaceholderLabel as UILabel
         }
@@ -84,7 +89,7 @@ extension UITextField {
         _rightPlaceholderLabel.layer.opacity = 0.0
         addSubview(_rightPlaceholderLabel)
         objc_setAssociatedObject(self,
-            kRightPlaceholderLabelPointer,
+            &kRightPlaceholderLabelPointer,
             _rightPlaceholderLabel,
             objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
         return _rightPlaceholderLabel

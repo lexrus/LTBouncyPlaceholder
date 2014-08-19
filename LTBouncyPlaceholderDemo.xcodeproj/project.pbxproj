@@ -12,7 +12,6 @@
 		D7900DDE194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900DDD194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift */; };
 		D7900DE81945920000F9A51F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7900DE71945920000F9A51F /* Main.storyboard */; };
 		D7900DEB194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900DEA194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift */; };
-		D7D9C5F719475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D9C5F619475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		D7900DDD194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTBouncyPlaceholderDemoTests.swift; sourceTree = "<group>"; };
 		D7900DE71945920000F9A51F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D7900DEA194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+LTBouncyPlaceholder.swift"; sourceTree = "<group>"; };
-		D7D9C5F619475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+LTBouncyPlaceholderKeys.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				D7900DEA194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift */,
-				D7D9C5F619475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift */,
 			);
 			path = LTBouncyPlaceholder;
 			sourceTree = "<group>";
@@ -218,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7D9C5F719475879007FDB0B /* UITextField+LTBouncyPlaceholderKeys.swift in Sources */,
 				D7900DD0194591E500F9A51F /* AppDelegate.swift in Sources */,
 				D7900DEB194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift in Sources */,
 			);
