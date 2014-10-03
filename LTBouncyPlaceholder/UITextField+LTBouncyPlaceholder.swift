@@ -116,7 +116,7 @@ extension UITextField {
             }
             
             NSNotificationCenter.defaultCenter().addObserver(self,
-                selector: Selector.convertFromStringLiteral("_didChange:"),
+                selector: Selector("_didChange:"),
                 name: UITextFieldTextDidChangeNotification,
                 object: nil)
         } else {

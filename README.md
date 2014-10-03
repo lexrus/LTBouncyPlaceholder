@@ -4,7 +4,7 @@
 
 It's my first Swift extension demonstrates singleton/swizzling/association in Swift.
 
-Xcode 6.0 beta 6 is required to compile this project.
+Xcode 6.1 GM is required to compile this project.
 
 It also comes with a QuartzComposer file on my <a href="https://dribbble.com/shots/1571790-Bouncy-placeholder">Dribbble</a>.
 
