@@ -1,61 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8yA-bm-OIl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8yA-bm-OIl">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller - LTBouncyPlaceholder Demo-->
-        <scene sceneID="9cs-kj-I7X">
+        <!--LTBouncyPlaceholder Demo-->
+        <scene sceneID="YHJ-aA-nIa">
             <objects>
-                <viewController id="ayc-Hu-h7d" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SVC-az-SbZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="JjG-LQ-ZoR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="316-Lv-Nm7">
+                <tableViewController title="LTBouncyPlaceholder Demo" id="lEH-DK-gwE" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Nqh-Az-w48">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your nickname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wrJ-dk-e9n">
-                                <rect key="frame" x="57" y="97" width="206" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysBouncePlaceholder" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="abbreviatedPlaceholder" value="Nickname"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A long password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Fe-R1-J0n">
-                                <rect key="frame" x="57" y="145" width="206" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysBouncePlaceholder" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="abbreviatedPlaceholder" value="Password"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OBc-GJ-VVr">
-                                <rect key="frame" x="57" y="193" width="206" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysBouncePlaceholder" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="abbreviatedPlaceholder" value="year old"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This one doesn't bounce" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="reh-vC-koG">
-                                <rect key="frame" x="57" y="242" width="206" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="LTBouncyPlaceholder Demo" id="DRd-3n-x6g"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bJp-1W-3jW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Test search bar" id="Ncw-bT-NfJ">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="lEH-DK-gwE" id="ckp-IZ-E1G"/>
+                            </connections>
+                        </searchBar>
+                        <sections>
+                            <tableViewSection headerTitle="I love bouncy placeholder" id="3Z1-7t-Dvx">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="2pb-0n-PRA">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="2pb-0n-PRA" id="3IF-If-PsE">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your nickname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-LU-Ks3" customClass="LTBouncyTextField" customModule="LTBouncyPlaceholderDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="10" width="290" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysBouncePlaceholder" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="abbreviatedPlaceholder" value="Nickname"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="dpy-6e-gKq">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dpy-6e-gKq" id="qoh-ip-AYt">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A long password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ky1-GG-kKa" customClass="LTBouncyTextField" customModule="LTBouncyPlaceholderDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="10" width="290" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysBouncePlaceholder" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="abbreviatedPlaceholder" value="Password"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="x2t-h5-dQX">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x2t-h5-dQX" id="Yce-O8-7yb">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-yA-uqD" customClass="LTBouncyTextField" customModule="LTBouncyPlaceholderDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="10" width="290" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysBouncePlaceholder" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="abbreviatedPlaceholder" value="year old"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="JHt-ZL-cxn">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JHt-ZL-cxn" id="wqq-gz-xPe">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="This one doesn't bounce" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u10-cJ-cbX" customClass="LTBouncyTextField" customModule="LTBouncyPlaceholderDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="10" width="290" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="lEH-DK-gwE" id="xj7-ie-a6r"/>
+                            <outlet property="delegate" destination="lEH-DK-gwE" id="nMu-T9-pXA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="LTBouncyPlaceholder Demo" id="wzo-q2-0Ic"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPh-Jd-maM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784" y="250"/>
+            <point key="canvasLocation" x="689" y="250"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OFM-dO-OSo">
@@ -68,7 +112,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ayc-Hu-h7d" kind="relationship" relationship="rootViewController" id="x7Q-k1-Xkt"/>
+                        <segue destination="lEH-DK-gwE" kind="relationship" relationship="rootViewController" id="UTW-Yw-qou"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Y8-gt-omI" userLabel="First Responder" sceneMemberID="firstResponder"/>

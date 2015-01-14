@@ -17,7 +17,7 @@ var kRightPlaceholderLabelPointer: Void?
 
 let kAnimationDuration: CFTimeInterval = 0.6
 
-extension UITextField {
+public class LTBouncyTextField : UITextField {
 
     /**
     *  A property declare whether the placeholder will play the bouncy animation during typing.
@@ -47,7 +47,7 @@ extension UITextField {
         if let _abbreviatedPlaceholder: AnyObject = _abbreviatedPlaceholderObject {
             return _abbreviatedPlaceholder as? String
         }
-        return nil
+        return .None
     }
     set {
         lt_rightPlaceholderLabel.text = newValue
@@ -96,24 +96,29 @@ extension UITextField {
     }
     }
 
-    func _drawPlaceholderInRect(rect: CGRect) {
-        println("swizzled default method")
-    }
+#if false
+    func _drawPlaceholderInRect(rect: CGRect) { }
+#else
+    override public func drawPlaceholderInRect(rect: CGRect) { }
+#endif
 
     override public func willMoveToSuperview(newSuperview: UIView!) {
-        if (nil != newSuperview) {
+        if nil != newSuperview {
+            
             lt_placeholderLabel.setNeedsDisplay()
             
+#if false
             struct TokenHolder {
                 static var token: dispatch_once_t = 0;
             }
-            
+
             dispatch_once(&TokenHolder.token) {
                 var originMethod: Method = class_getInstanceMethod(object_getClass(self), Selector("drawPlaceholderInRect:"))
                 var swizzledMethod: Method = class_getInstanceMethod(object_getClass(self), Selector("_drawPlaceholderInRect:"))
                 method_exchangeImplementations(originMethod, swizzledMethod)
 
             }
+#endif
             
             NSNotificationCenter.defaultCenter().addObserver(self,
                 selector: Selector("_didChange:"),
