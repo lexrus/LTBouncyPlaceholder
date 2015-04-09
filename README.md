@@ -4,7 +4,7 @@
 
 It's my first Swift extension demonstrates singleton/<del>swizzling</del>/association in Swift.
 
-Xcode 6.1.1 is required to compile this project.
+Xcode 6.3 is required to compile this project.
 
 It also comes with a QuartzComposer file on my <a href="https://dribbble.com/shots/1571790-Bouncy-placeholder">Dribbble</a>.
 

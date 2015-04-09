@@ -62,7 +62,7 @@ public class LTBouncyTextField : UITextField {
     get {
         var _placeholderLabelObject: AnyObject? = objc_getAssociatedObject(self, &kPlaceholderLabelPointer)
         if let _placeholderLabel : AnyObject = _placeholderLabelObject {
-            return _placeholderLabel as UILabel
+            return _placeholderLabel as! UILabel
         }
         var _placeholderLabel = UILabel(frame: placeholderRectForBounds(bounds))
         _placeholderLabel.font = font
@@ -81,7 +81,7 @@ public class LTBouncyTextField : UITextField {
     get {
         var _rightPlaceholderLabelObject: AnyObject? = objc_getAssociatedObject(self, &kRightPlaceholderLabelPointer)
         if let _rightPlaceholderLabel: AnyObject = _rightPlaceholderLabelObject {
-            return _rightPlaceholderLabel as UILabel
+            return _rightPlaceholderLabel as! UILabel
         }
         var _rightPlaceholderLabel = UILabel(frame: placeholderRectForBounds(bounds))
         _rightPlaceholderLabel.font = font
@@ -193,7 +193,7 @@ public class LTBouncyTextField : UITextField {
                 let bounceToRight = CAKeyframeAnimation(keyPath: "position.x")
                 bounceToRight.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
                 bounceToRight.duration = kAnimationDuration
-                bounceToRight.values = _bounceKeyframes(toRight: true)
+                bounceToRight.values = _bounceKeyframes(toRight: true) as [AnyObject]
                 bounceToRight.fillMode = kCAFillModeForwards
                 bounceToRight.additive = true
                 bounceToRight.removedOnCompletion = false
@@ -225,7 +225,7 @@ public class LTBouncyTextField : UITextField {
                 let bounceToLeft = CAKeyframeAnimation(keyPath: "position.x")
                 bounceToLeft.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
                 bounceToLeft.duration = kAnimationDuration
-                bounceToLeft.values = _bounceKeyframes(toRight: false)
+                bounceToLeft.values = _bounceKeyframes(toRight: false) as [AnyObject]
                 bounceToLeft.fillMode = kCAFillModeForwards
                 bounceToLeft.additive = true
                 bounceToLeft.removedOnCompletion = false
@@ -256,7 +256,7 @@ public class LTBouncyTextField : UITextField {
                 let bounceToRight = CAKeyframeAnimation(keyPath: "position.x")
                 bounceToRight.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
                 bounceToRight.duration = kAnimationDuration
-                bounceToRight.values = _bounceKeyframes(toRight: true)
+                bounceToRight.values = _bounceKeyframes(toRight: true) as [AnyObject]
                 bounceToRight.fillMode = kCAFillModeForwards
                 bounceToRight.additive = true
                 bounceToRight.removedOnCompletion = false
@@ -265,7 +265,7 @@ public class LTBouncyTextField : UITextField {
                 let bounceToLeft = CAKeyframeAnimation(keyPath: "position.x")
                 bounceToLeft.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
                 bounceToLeft.duration = kAnimationDuration
-                bounceToLeft.values = _bounceKeyframes(toRight: false)
+                bounceToLeft.values = _bounceKeyframes(toRight: false) as [AnyObject]
                 bounceToLeft.fillMode = kCAFillModeForwards
                 bounceToLeft.additive = true
                 bounceToLeft.removedOnCompletion = false
