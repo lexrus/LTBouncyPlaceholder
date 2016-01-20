@@ -132,20 +132,24 @@ public class LTBouncyTextField : UITextField {
     }
 
     func _didChange (notification: NSNotification) {
-        if notification.object === self {
-            if text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
-                if alwaysBouncePlaceholder {
-                    
-                    _animatePlaceholder(toRight: true)
-                } else {
-                    lt_placeholderLabel.hidden = true
-                }
+        guard notification.object === self else {
+            return
+        }
+        guard let text = text else {
+            return
+        }
+        if text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 0 {
+            if alwaysBouncePlaceholder {
+
+                _animatePlaceholder(toRight: true)
             } else {
-                if alwaysBouncePlaceholder {
-                    _animatePlaceholder(toRight: false)
-                } else {
-                    lt_placeholderLabel.hidden = false
-                }
+                lt_placeholderLabel.hidden = true
+            }
+        } else {
+            if alwaysBouncePlaceholder {
+                _animatePlaceholder(toRight: false)
+            } else {
+                lt_placeholderLabel.hidden = false
             }
         }
     }
@@ -181,15 +185,15 @@ public class LTBouncyTextField : UITextField {
     }
 
     private func _animatePlaceholder (toRight toRight: Bool) {
-        if let abbrPlaceholder = abbreviatedPlaceholder {
+        if let _ = abbreviatedPlaceholder {
             if (toRight) {
-                if lt_rightPlaceholderLabel.layer.presentationLayer().opacity > 0 {
+                if lt_rightPlaceholderLabel.layer.presentationLayer()?.opacity > 0 {
                     return
                 }
-                
+
                 lt_placeholderLabel.layer.removeAllAnimations()
                 lt_rightPlaceholderLabel.layer.removeAllAnimations()
-                
+
                 let bounceToRight = CAKeyframeAnimation(keyPath: "position.x")
                 bounceToRight.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
                 bounceToRight.duration = kAnimationDuration
@@ -197,7 +201,7 @@ public class LTBouncyTextField : UITextField {
                 bounceToRight.fillMode = kCAFillModeForwards
                 bounceToRight.additive = true
                 bounceToRight.removedOnCompletion = false
-                
+
                 let fadeOut = CABasicAnimation(keyPath: "opacity")
                 fadeOut.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
                 fadeOut.fromValue = 1
@@ -207,7 +211,7 @@ public class LTBouncyTextField : UITextField {
                 fadeOut.removedOnCompletion = false
                 lt_placeholderLabel.layer.addAnimation(bounceToRight, forKey: "bounceToRight")
                 lt_placeholderLabel.layer.addAnimation(fadeOut, forKey: "fadeOut")
-                
+
                 let fadeIn = CABasicAnimation(keyPath: "opacity")
                 fadeIn.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
                 fadeIn.fromValue = 0
@@ -215,13 +219,13 @@ public class LTBouncyTextField : UITextField {
                 fadeIn.duration = kAnimationDuration / 3
                 fadeIn.fillMode = kCAFillModeForwards
                 fadeIn.removedOnCompletion = false
-                
+
                 lt_rightPlaceholderLabel.layer.addAnimation(bounceToRight, forKey: "bounceToRight")
                 lt_rightPlaceholderLabel.layer.addAnimation(fadeIn, forKey: "fadeIn")
             } else {
                 lt_placeholderLabel.layer.removeAllAnimations()
                 lt_rightPlaceholderLabel.layer.removeAllAnimations()
-                
+
                 let bounceToLeft = CAKeyframeAnimation(keyPath: "position.x")
                 bounceToLeft.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
                 bounceToLeft.duration = kAnimationDuration
@@ -229,7 +233,7 @@ public class LTBouncyTextField : UITextField {
                 bounceToLeft.fillMode = kCAFillModeForwards
                 bounceToLeft.additive = true
                 bounceToLeft.removedOnCompletion = false
-                
+
                 let fadeIn = CABasicAnimation(keyPath: "opacity")
                 fadeIn.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
                 fadeIn.duration = kAnimationDuration / 3
@@ -239,7 +243,7 @@ public class LTBouncyTextField : UITextField {
                 fadeIn.removedOnCompletion = false
                 lt_placeholderLabel.layer.addAnimation(fadeIn, forKey: "fadeIn")
                 lt_placeholderLabel.layer.addAnimation(bounceToLeft, forKey: "bounceToLeft")
-                
+
                 let fadeOut = CABasicAnimation(keyPath: "opacity")
                 fadeOut.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
                 fadeOut.duration = kAnimationDuration / 3
