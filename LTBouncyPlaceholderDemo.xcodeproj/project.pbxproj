@@ -9,42 +9,21 @@
 /* Begin PBXBuildFile section */
 		D7900DD0194591E500F9A51F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900DCF194591E500F9A51F /* AppDelegate.swift */; };
 		D7900DD2194591E500F9A51F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7900DD1194591E500F9A51F /* Images.xcassets */; };
-		D7900DDE194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900DDD194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift */; };
 		D7900DE81945920000F9A51F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7900DE71945920000F9A51F /* Main.storyboard */; };
 		D7900DEB194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7900DEA194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D7900DD8194591E500F9A51F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D7900DC2194591E500F9A51F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D7900DC9194591E500F9A51F;
-			remoteInfo = LTBouncyPlaceholderDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D7900DCA194591E500F9A51F /* LTBouncyPlaceholderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTBouncyPlaceholderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7900DCE194591E500F9A51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7900DCF194591E500F9A51F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7900DD1194591E500F9A51F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D7900DD7194591E500F9A51F /* LTBouncyPlaceholderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LTBouncyPlaceholderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7900DDC194591E500F9A51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7900DDD194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTBouncyPlaceholderDemoTests.swift; sourceTree = "<group>"; };
 		D7900DE71945920000F9A51F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D7900DEA194592A800F9A51F /* UITextField+LTBouncyPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+LTBouncyPlaceholder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D7900DC7194591E500F9A51F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7900DD4194591E500F9A51F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,7 +38,6 @@
 			children = (
 				D7900DE91945928400F9A51F /* LTBouncyPlaceholder */,
 				D7900DCC194591E500F9A51F /* LTBouncyPlaceholderDemo */,
-				D7900DDA194591E500F9A51F /* LTBouncyPlaceholderDemoTests */,
 				D7900DCB194591E500F9A51F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				D7900DCA194591E500F9A51F /* LTBouncyPlaceholderDemo.app */,
-				D7900DD7194591E500F9A51F /* LTBouncyPlaceholderDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,23 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				D7900DCE194591E500F9A51F /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D7900DDA194591E500F9A51F /* LTBouncyPlaceholderDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				D7900DDD194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift */,
-				D7900DDB194591E500F9A51F /* Supporting Files */,
-			);
-			path = LTBouncyPlaceholderDemoTests;
-			sourceTree = "<group>";
-		};
-		D7900DDB194591E500F9A51F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D7900DDC194591E500F9A51F /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -137,39 +97,19 @@
 			productReference = D7900DCA194591E500F9A51F /* LTBouncyPlaceholderDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D7900DD6194591E500F9A51F /* LTBouncyPlaceholderDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D7900DE4194591E500F9A51F /* Build configuration list for PBXNativeTarget "LTBouncyPlaceholderDemoTests" */;
-			buildPhases = (
-				D7900DD3194591E500F9A51F /* Sources */,
-				D7900DD4194591E500F9A51F /* Frameworks */,
-				D7900DD5194591E500F9A51F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D7900DD9194591E500F9A51F /* PBXTargetDependency */,
-			);
-			name = LTBouncyPlaceholderDemoTests;
-			productName = LTBouncyPlaceholderDemoTests;
-			productReference = D7900DD7194591E500F9A51F /* LTBouncyPlaceholderDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		D7900DC2194591E500F9A51F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = LexTang.com;
 				TargetAttributes = {
 					D7900DC9194591E500F9A51F = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					D7900DD6194591E500F9A51F = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = D7900DC9194591E500F9A51F;
 					};
 				};
 			};
@@ -186,7 +126,6 @@
 			projectRoot = "";
 			targets = (
 				D7900DC9194591E500F9A51F /* LTBouncyPlaceholderDemo */,
-				D7900DD6194591E500F9A51F /* LTBouncyPlaceholderDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,13 +137,6 @@
 			files = (
 				D7900DD2194591E500F9A51F /* Images.xcassets in Resources */,
 				D7900DE81945920000F9A51F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7900DD5194591E500F9A51F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,23 +152,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7900DD3194591E500F9A51F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D7900DDE194591E500F9A51F /* LTBouncyPlaceholderDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D7900DD9194591E500F9A51F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D7900DC9194591E500F9A51F /* LTBouncyPlaceholderDemo */;
-			targetProxy = D7900DD8194591E500F9A51F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D7900DDF194591E500F9A51F /* Debug */ = {
@@ -338,42 +254,6 @@
 			};
 			name = Release;
 		};
-		D7900DE5194591E500F9A51F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LTBouncyPlaceholderDemo.app/LTBouncyPlaceholderDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LTBouncyPlaceholderDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		D7900DE6194591E500F9A51F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LTBouncyPlaceholderDemo.app/LTBouncyPlaceholderDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LTBouncyPlaceholderDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -391,15 +271,6 @@
 			buildConfigurations = (
 				D7900DE2194591E500F9A51F /* Debug */,
 				D7900DE3194591E500F9A51F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D7900DE4194591E500F9A51F /* Build configuration list for PBXNativeTarget "LTBouncyPlaceholderDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D7900DE5194591E500F9A51F /* Debug */,
-				D7900DE6194591E500F9A51F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

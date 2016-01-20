@@ -25,7 +25,7 @@ public class LTBouncyTextField : UITextField {
     */
     public var alwaysBouncePlaceholder: Bool {
     get {
-        var _alwaysBouncePlaceholderObject : AnyObject?
+        let _alwaysBouncePlaceholderObject : AnyObject?
             = objc_getAssociatedObject(self, &kAlwaysBouncePlaceholderPointer)
         if let _alwaysBouncePlaceholder = _alwaysBouncePlaceholderObject?.boolValue {
             return _alwaysBouncePlaceholder
@@ -37,13 +37,13 @@ public class LTBouncyTextField : UITextField {
         objc_setAssociatedObject(self,
             &kAlwaysBouncePlaceholderPointer,
             newValue,
-            objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+            objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
     }
 
     public var abbreviatedPlaceholder: String? {
     get {
-        var _abbreviatedPlaceholderObject: AnyObject? = objc_getAssociatedObject(self, &kAbbreviatedPlaceholderPointer)
+        let _abbreviatedPlaceholderObject: AnyObject? = objc_getAssociatedObject(self, &kAbbreviatedPlaceholderPointer)
         if let _abbreviatedPlaceholder: AnyObject = _abbreviatedPlaceholderObject {
             return _abbreviatedPlaceholder as? String
         }
@@ -54,17 +54,17 @@ public class LTBouncyTextField : UITextField {
         objc_setAssociatedObject(self,
             &kAbbreviatedPlaceholderPointer,
             newValue,
-            objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+            objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
     }
 
     private var lt_placeholderLabel: UILabel {
     get {
-        var _placeholderLabelObject: AnyObject? = objc_getAssociatedObject(self, &kPlaceholderLabelPointer)
+        let _placeholderLabelObject: AnyObject? = objc_getAssociatedObject(self, &kPlaceholderLabelPointer)
         if let _placeholderLabel : AnyObject = _placeholderLabelObject {
             return _placeholderLabel as! UILabel
         }
-        var _placeholderLabel = UILabel(frame: placeholderRectForBounds(bounds))
+        let _placeholderLabel = UILabel(frame: placeholderRectForBounds(bounds))
         _placeholderLabel.font = font
         _placeholderLabel.text = placeholder
         _placeholderLabel.textColor = .lightGrayColor()
@@ -72,18 +72,18 @@ public class LTBouncyTextField : UITextField {
         objc_setAssociatedObject(self,
             &kPlaceholderLabelPointer,
             _placeholderLabel,
-            objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+            objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         return _placeholderLabel
     }
     }
 
     private var lt_rightPlaceholderLabel: UILabel {
     get {
-        var _rightPlaceholderLabelObject: AnyObject? = objc_getAssociatedObject(self, &kRightPlaceholderLabelPointer)
+        let _rightPlaceholderLabelObject: AnyObject? = objc_getAssociatedObject(self, &kRightPlaceholderLabelPointer)
         if let _rightPlaceholderLabel: AnyObject = _rightPlaceholderLabelObject {
             return _rightPlaceholderLabel as! UILabel
         }
-        var _rightPlaceholderLabel = UILabel(frame: placeholderRectForBounds(bounds))
+        let _rightPlaceholderLabel = UILabel(frame: placeholderRectForBounds(bounds))
         _rightPlaceholderLabel.font = font
         _rightPlaceholderLabel.textColor = .lightGrayColor()
         _rightPlaceholderLabel.layer.opacity = 0.0
@@ -91,7 +91,7 @@ public class LTBouncyTextField : UITextField {
         objc_setAssociatedObject(self,
             &kRightPlaceholderLabelPointer,
             _rightPlaceholderLabel,
-            objc_AssociationPolicy(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
+            objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         return _rightPlaceholderLabel
     }
     }
@@ -156,14 +156,14 @@ public class LTBouncyTextField : UITextField {
         
         if let _rightPlaceholder = rightPlaceholder {
             let attributes = [NSFontAttributeName: lt_rightPlaceholderLabel.font]
-            var abbrSize = _rightPlaceholder.sizeWithAttributes(attributes)
+            let abbrSize = _rightPlaceholder.sizeWithAttributes(attributes)
             return Float(abbrSize.width)
         }
         return 0
     }
     }
 
-    private func _bounceKeyframes(#toRight: Bool) -> NSArray {
+    private func _bounceKeyframes(toRight toRight: Bool) -> NSArray {
         let steps = 100
         var values = [Double]()
         var value: Double
@@ -180,7 +180,7 @@ public class LTBouncyTextField : UITextField {
         return values
     }
 
-    private func _animatePlaceholder (#toRight: Bool) {
+    private func _animatePlaceholder (toRight toRight: Bool) {
         if let abbrPlaceholder = abbreviatedPlaceholder {
             if (toRight) {
                 if lt_rightPlaceholderLabel.layer.presentationLayer().opacity > 0 {
